@@ -21,8 +21,9 @@ class Graph:
         * If there is an end node input and a path does not exist, return None
 
         """
+        # no end node, retur a list of nodes in BFS traversal order
+        #take in a graph (self) and a starting node (start)
+        if end is None:
+            return list(nx.bfs_tree(self.graph, start))
+
         return
-
-
-
-
