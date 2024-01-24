@@ -26,4 +26,12 @@ class Graph:
         if end is None:
             return list(nx.bfs_tree(self.graph, start))
 
-        return
+        # yes end node, path available, return list of nodes with order of shortest path
+        # take in graph (Self) and start node, and end node
+
+        elif nx.has_path(self.graph, start, end):
+            return nx.shortest_path(self.graph, start, end, method='bfs')
+        
+        # yes end node, but no path:
+        else:
+            return None
