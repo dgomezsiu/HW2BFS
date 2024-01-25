@@ -22,7 +22,7 @@ def test_bfs_traversal():
     assert len(bfs_test_graph) == len(bfs_test_graph)
 
     #check if the nodes are traversed in the same order
-    assert realgraph_bfs = bfs_test_graph
+    assert realgraph_bfs == bfs_test_graph
 
 
 def test_bfs():
