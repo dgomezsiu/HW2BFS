@@ -1,3 +1,5 @@
+![](https://github.com/dgomezsiu/HW2BFS/workflows/project2/badge.svg)
+
 # Assignment 2
 Breadth-first search
 
@@ -43,7 +45,7 @@ In test/test_bfs.py:
 	Ensure that the github actions complete the following:
 	* runs pytest
  
-![](https://github.com/dgomezsiu/HW2BFS/workflows/project2/badge.svg)
+
 
 # Getting Started
 To get started you will need to fork this repository onto your own github. You will then work on the code base from your own repo and make changes to it in the form of commits. 
