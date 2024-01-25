@@ -37,7 +37,7 @@ def test_bfs():
     which should return None. 
     """
 
-    test_graph = graph.Graph('data/tiny_network.adjlist')
+    test_graph = graph.Graph('data/citation_network.adjlist')
 
-    #check None return if name not in graph
-    assert test_graph.bfs("Luke Gilbert", "Elmo") == None
+    assert len(test_graph.bfs("Lani Wu", "Nevan Krogan")) == len(list(nx.shortest_path(test_graph.graph, "Lani Wu", "Nevan Krogan")))
+
