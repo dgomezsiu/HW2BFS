@@ -13,7 +13,7 @@ def test_bfs_traversal():
     """
     test_graph = graph.Graph('data/tiny_network.adjlist')
     bfs_test_graph = test_graph.bfs('Luke Gilbert')
-    assert len(bgs_test_graph) == 30
+    assert len(bfs_test_graph) == 30
 
 
 def test_bfs():
