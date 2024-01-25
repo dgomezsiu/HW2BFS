@@ -59,7 +59,7 @@ class Graph:
             shortest_path_node = end
             while shortest_path_node != None: #while we aren't at the parent node
                 shortest_path.append(shortest_path_node) #add the node
-                shortest_path_node = parent_nodes(shortest_path_node) #move to its parent
+                shortest_path_node = parent_nodes[shortest_path_node] #move to its parent
             return shortest_path #return the direct path from the end to the beginning
 
         #no end node is specified, so return the bfs
