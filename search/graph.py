@@ -50,3 +50,24 @@ class Graph:
                     visited.append(neighbor) #visit the node
                     q.append(neighbor) #add the neighbor to the q
                     parent_nodes[neighbor] = current #add current as the parent of the neighbors
+
+        # end node is specified and is visited in the search, return the shortest path
+
+        if end != None and end in visited:
+            shortest_path = []
+            #start from the end and work back by calling its parents
+            shortest_path_node = end
+            while shortest_path_node != None: #while we aren't at the parent node
+                shortest_path.append(shortest_path_node) #add the node
+                shortest_path_node = parent_nodes(shortest_path_node) #move to its parent
+            return shortest_path #return the direct path from the end to the beginning
+
+        #no end node is specified, so return the bfs
+        if end == None:
+            return visited
+
+        #if end node is specified but not visitied
+        else:
+            return None
+
+        
