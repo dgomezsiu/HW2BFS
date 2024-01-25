@@ -36,8 +36,8 @@ class Graph:
 
         # start the queue, list of visited nodes, and track parent nodes
 
-        q = []
-        visited = []
+        q = [start]
+        visited = [start]
         parent_nodes = {start: None}
 
         #search the graph
