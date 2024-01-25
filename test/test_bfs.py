@@ -39,5 +39,5 @@ def test_bfs():
 
     test_graph = graph.Graph('data/tiny_network.adjlist')
 
-    #assert lengths of my graphs are the same in both directions
-     assert len(test_graph.bfs("Luke Gilbert", "Nevan Krogan")) == len(list(nx.shortest_path(test_graph.graph, "Luke Gilbert", "Nevan Krogan")))
+    #check None return if name not in graph
+    assert test_graph.bfs("Luke Gilbert", "Elmo") == None
