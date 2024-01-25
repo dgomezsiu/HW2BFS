@@ -34,4 +34,19 @@ class Graph:
         if end != None and end not in self.graph:
             raise ValueError("End node is not in the graph...")
 
-        
+        # start the queue, list of visited nodes, and track parent nodes
+
+        q = []
+        visited = []
+        parent_nodes = {start: None}
+
+        #search the graph
+        #a successor in the graph has an edge from the parent to the successor
+
+        while len(q) > 0: #while the length of the queue is zero
+            current = q.pop(0) #take the current node
+            for neighbor in self.graph.successors(current):
+                if neighbor not in visited: #if its an unsearched node
+                    visited.append(neighbor) #visit the node
+                    q.append(neighbor) #add the neighbor to the q
+                    parent_nodes[neighbor] = current #add current as the parent of the neighbors
