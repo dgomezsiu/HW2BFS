@@ -21,17 +21,17 @@ class Graph:
         * If there is an end node input and a path does not exist, return None
 
         """
-        # no end node, retur a list of nodes in BFS traversal order
-        #take in a graph (self) and a starting node (start)
-        if end is None:
-            return list(nx.bfs_tree(self.graph, start))
-
-        # yes end node, path available, return list of nodes with order of shortest path
-        # take in graph (Self) and start node, and end node
-
-        elif nx.has_path(self.graph, start, end):
-            return nx.shortest_path(self.graph, start, end, method='bfs')
         
-        # yes end node, but no path:
-        else:
-            return None
+        #check edge cases
+
+        #if the start node is not in the graph, error
+
+        if start not in self.graph:
+            raise ValueError("Start node is not in the graph...")
+        
+        #if the end node is not in the graph, error
+
+        if end != None and end not in self.graph:
+            raise ValueError("End node is not in the graph...")
+
+        
