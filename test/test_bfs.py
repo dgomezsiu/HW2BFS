@@ -38,6 +38,7 @@ def test_bfs():
     """
 
     test_graph = graph.Graph('data/citation_network.adjlist')
-
-    assert len(test_graph.bfs("Lani Wu", "Nevan Krogan")) == len(list(nx.shortest_path(test_graph.graph, "Lani Wu", "Nevan Krogan")))
+    
+    #test if the path between two nodes is shortest using nx package
+    assert len(test_graph.bfs("Yin Shen", "Matthew Spitzer")) == len(list(nx.shortest_path(test_graph.graph, "Yin Shen", "Matthew Spitzer")))
 
