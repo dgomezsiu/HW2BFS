@@ -42,7 +42,7 @@ In test/test_bfs.py:
 
 	Ensure that the github actions complete the following:
 	* runs pytest
-
+ 
 ![](https://github.com/dgomezsiu/HW2BFS/workflows/project2/badge.svg)
 
 # Getting Started
