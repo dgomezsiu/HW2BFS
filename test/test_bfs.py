@@ -11,7 +11,7 @@ def test_bfs_traversal():
     that all nodes are being traversed (ie. returns 
     the right number of nodes, in the right order, etc.)
     """
-    test_graph = graph('data/tiny_network.adjlist')
+    test_graph = graph.Graph('data/tiny_network.adjlist')
     bfs_test_graph = test_graph.bfs('Luke Gilbert')
     assert len(bgs_test_graph) == 30
 
