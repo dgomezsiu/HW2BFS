@@ -42,3 +42,6 @@ def test_bfs():
     #test if the path between two nodes is shortest using nx package
     assert len(test_graph.bfs("Yin Shen", "Matthew Spitzer")) == len(list(nx.shortest_path(test_graph.graph, "Yin Shen", "Matthew Spitzer")))
 
+    #test if the raise error is correct
+    with pytest.raises(KeyError):
+        test_graph.bfs('Yin Shen', "Elmo")
