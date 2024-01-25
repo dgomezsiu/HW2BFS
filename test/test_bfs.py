@@ -43,5 +43,5 @@ def test_bfs():
     assert len(test_graph.bfs("Yin Shen", "Matthew Spitzer")) == len(list(nx.shortest_path(test_graph.graph, "Yin Shen", "Matthew Spitzer")))
 
     #test if the raise error is correct
-    with pytest.raises(KeyError):
+    with pytest.raises(KeyError, match = 'End node is not in the graph...'):
         test_graph.bfs('Yin Shen', "Elmo")
