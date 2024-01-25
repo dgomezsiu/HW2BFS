@@ -31,7 +31,9 @@ In test/test_bfs.py:
 ## Software Development Assessment
 
 * Write unit tests (in the test_bfs.py file) for your breadth first search
-* Replace these instructions with a brief description of bfs in your forked repo
+* Implements a breadth first search by traversing through the nodes and noting parents and neighbors.
+* Checks the shortest path by returning to parent nodes until the end node hits the parent node of the graph initialization.
+* Value errors are raised for edge cases, and tests check to see if returns are correct
 	
 * Automate Testing with a [Github Actions](https://docs.github.com/en/actions)
 
