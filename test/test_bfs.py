@@ -18,7 +18,7 @@ def test_bfs_traversal():
     assert len(bfs_test_graph) == 30
 
     #use nx package to build bfs and compare graphs to make sure they are the same length
-    realgraph_bfs = nx.bfs_tree(test_graph.graph, 'Luke Gilbert').nodes()
+    realgraph_bfs = list(nx.bfs_tree(test_graph.graph, 'Luke Gilbert').nodes())
     assert len(bfs_test_graph) == len(bfs_test_graph)
 
     #check if the nodes are traversed in the same order
