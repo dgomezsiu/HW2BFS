@@ -45,3 +45,6 @@ def test_bfs():
     #test if the raise error is correct
     with pytest.raises(ValueError):
         test_graph.bfs('Yin Shen', "Elmo")
+
+    #return none when unconnected nodes are called
+    assert test_graph.bfs('Reza Abbasi-Asl', 'Hao Li') == None
